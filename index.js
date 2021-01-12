@@ -33,8 +33,10 @@ let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog
 function exerciseDog(dogName, dogBreed) {
     
     let soln = [];
-    for(let i = 0; i < routine.length; i++){
-        soln.push(routine[i](dogName, dogBreed));
-    }
+    // for(let i = 0; i < routine.length; i++){
+    //     soln.push(routine[i](dogName, dogBreed));
+    // }
+    // return soln;
+    routine.forEach(fnc => soln.push(fnc(dogName,dogBreed)));
     return soln;
 }
